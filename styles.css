@@ -1,0 +1,63 @@
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz() {
+    showQuestion();
+}
+
+function showQuestion() {
+    const questionElement = document.getElementById('question');
+    const optionsContainer = document.getElementById('options-container');
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+
+    questionElement.textContent = currentQuestion.question;
+    optionsContainer.innerHTML = '';
+
+    currentQuestion.options.forEach((option, index) => {
+        const button = document.createElement('button');
+        button.textContent = option;
+        button.addEventListener('click', () => selectOption(index));
+        optionsContainer.appendChild(button);
+    });
+
+    document.getElementById('submit-btn').disabled = false;
+    document.getElementById('next-btn').disabled = true;
+    document.getElementById('result').textContent = '';
+}
+
+function selectOption(optionIndex) {
+    const selectedOption = quizQuestions[currentQuestionIndex].options[optionIndex];
+    const correctOption = quizQuestions[currentQuestionIndex].answer;
+
+    if (selectedOption === correctOption) {
+        score++;
+    }
+
+    document.getElementById('submit-btn').disabled = true;
+    document.getElementById('next-btn').disabled = false;
+
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = selectedOption === correctOption ? 'Correct!' : `Wrong! The correct answer is ${correctOption}.`;
+}
+
+function checkAnswer() {
+    const options = document.querySelectorAll('#options-container button');
+    options.forEach((option, index) => option.disabled = true);
+}
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < 15) {
+        showQuestion();
+    } else {
+        endQuiz();
+    }
+}
+
+function endQuiz() {
+    const quizContainer = document.getElementById('quiz-container');
+    quizContainer.innerHTML = `<h1>Quiz Completed!</h1>
+                               <p>Your score is ${score} out of 15.</p>`;
+}
+
+document.addEventListener('DOMContentLoaded', startQuiz);
