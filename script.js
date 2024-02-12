@@ -232,7 +232,7 @@ const questions = [
 
 let currentQuestionIndex = 0;
 let score = 0;
-const totalQuestions = 15;
+const totalQuestions = 5;
 
 function startQuiz() {
     showQuestion();
@@ -284,13 +284,13 @@ function selectOption(selectedOption) {
     resultElement.textContent = '';
 
     document.querySelectorAll('input[name="options"]').forEach(option => {
-        option.disabled = true;
         option.parentElement.classList.remove('selected-option');
     });
 
     const selectedOptionElement = document.querySelector(`input[value="${selectedOption}"]`);
     selectedOptionElement.parentElement.classList.add('selected-option');
 }
+
 
 function checkAnswer() {
     const selectedOption = document.querySelector('#options-container input[name="options"]:checked');
