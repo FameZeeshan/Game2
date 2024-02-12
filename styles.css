@@ -1,63 +1,125 @@
-let currentQuestionIndex = 0;
-let score = 0;
-
-function startQuiz() {
-    showQuestion();
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-function showQuestion() {
-    const questionElement = document.getElementById('question');
-    const optionsContainer = document.getElementById('options-container');
-    const currentQuestion = quizQuestions[currentQuestionIndex];
-
-    questionElement.textContent = currentQuestion.question;
-    optionsContainer.innerHTML = '';
-
-    currentQuestion.options.forEach((option, index) => {
-        const button = document.createElement('button');
-        button.textContent = option;
-        button.addEventListener('click', () => selectOption(index));
-        optionsContainer.appendChild(button);
-    });
-
-    document.getElementById('submit-btn').disabled = false;
-    document.getElementById('next-btn').disabled = true;
-    document.getElementById('result').textContent = '';
+#quiz-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
 }
 
-function selectOption(optionIndex) {
-    const selectedOption = quizQuestions[currentQuestionIndex].options[optionIndex];
-    const correctOption = quizQuestions[currentQuestionIndex].answer;
-
-    if (selectedOption === correctOption) {
-        score++;
-    }
-
-    document.getElementById('submit-btn').disabled = true;
-    document.getElementById('next-btn').disabled = false;
-
-    const resultElement = document.getElementById('result');
-    resultElement.textContent = selectedOption === correctOption ? 'Correct!' : `Wrong! The correct answer is ${correctOption}.`;
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
 }
 
-function checkAnswer() {
-    const options = document.querySelectorAll('#options-container button');
-    options.forEach((option, index) => option.disabled = true);
+.option-container {
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-function nextQuestion() {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < 15) {
-        showQuestion();
-    } else {
-        endQuiz();
-    }
+.option-container:hover {
+    background-color: #3498db;
+    color: #fff;
 }
 
-function endQuiz() {
-    const quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = `<h1>Quiz Completed!</h1>
-                               <p>Your score is ${score} out of 15.</p>`;
+input[type="radio"] {
+    display: none;
 }
 
-document.addEventListener('DOMContentLoaded', startQuiz);
+input[type="radio"]:checked + label {
+    background-color: #3498db;
+    color: #fff;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+#question-number {
+    margin-top: 10px;
+    color: #555;
+}
+
+#start-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#start-btn:hover {
+    background-color: #2980b9;
+}
+
+#quiz-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.selected-option {
+    background-color: #c1e2b3; /* Change this to your desired color */
+}
+
+#submit-btn, #next-btn {
+    margin-top: 10px;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#question-number {
+    margin-top: 10px;
+    font-style: italic;
+}

@@ -1,96 +1,337 @@
+// script.js
+
 const questions = [
-  {
-      question: "What is the capital of Japan?",
-      choices: ["Seoul", "Tokyo", "Beijing", "Bangkok"],
-      correctAnswer: "Tokyo"
-  },
-  // Add more questions here
-  // ...
+    {
+        question: "What is the capital of Japan?",
+        choices: ["Seoul", "Tokyo", "Beijing", "Bangkok"],
+        correctAnswer: "Tokyo"
+    },
+    {
+        question: "Which planet is known as the 'Red Planet'?",
+        choices: ["Earth", "Mars", "Venus", "Jupiter"],
+        correctAnswer: "Mars"
+    },
+    {
+        question: "Who wrote 'Romeo and Juliet'?",
+        choices: ["Charles Dickens", "William Shakespeare", "Jane Austen", "Leo Tolstoy"],
+        correctAnswer: "William Shakespeare"
+    },
+    {
+        question: "In which year did the Titanic sink?",
+        choices: ["1910", "1912", "1915", "1918"],
+        correctAnswer: "1912"
+    },
+    {
+        question: "What is the largest mammal in the world?",
+        choices: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+        correctAnswer: "Blue Whale"
+    },
+    {
+        question: "Which country is known as the 'Land of the Rising Sun'?",
+        choices: ["China", "Japan", "South Korea", "Vietnam"],
+        correctAnswer: "Japan"
+    },
+    {
+        question: "Who painted the Mona Lisa?",
+        choices: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+        correctAnswer: "Leonardo da Vinci"
+    },
+    {
+        question: "What is the currency of Brazil?",
+        choices: ["Peso", "Real", "Rupee", "Dollar"],
+        correctAnswer: "Real"
+    },
+    {
+        question: "Which gas do plants absorb from the atmosphere during photosynthesis?",
+        choices: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+        correctAnswer: "Carbon Dioxide"
+    },
+    {
+        question: "Who is the author of 'To Kill a Mockingbird'?",
+        choices: ["Harper Lee", "J.K. Rowling", "George Orwell", "Ernest Hemingway"],
+        correctAnswer: "Harper Lee"
+    },
+    {
+        question: "Which ocean is the largest on Earth?",
+        choices: ["Atlantic Ocean", "Indian Ocean", "Southern Ocean", "Pacific Ocean"],
+        correctAnswer: "Pacific Ocean"
+    },
+    {
+        question: "What is the capital of Australia?",
+        choices: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+        correctAnswer: "Canberra"
+    },
+    {
+        question: "Who is known as the 'Father of Computer Science'?",
+        choices: ["Bill Gates", "Alan Turing", "Steve Jobs", "Tim Berners-Lee"],
+        correctAnswer: "Alan Turing"
+    },
+    {
+        question: "Which element has the chemical symbol 'O'?",
+        choices: ["Osmium", "Oxygen", "Oganesson", "Obtusium"],
+        correctAnswer: "Oxygen"
+    },
+    {
+        question: "What is the largest desert in the world?",
+        choices: ["Sahara Desert", "Gobi Desert", "Antarctica", "Arctic Desert"],
+        correctAnswer: "Antarctica"
+    },
+    {
+        question: "Who is the Greek god of the sea?",
+        choices: ["Zeus", "Poseidon", "Hades", "Apollo"],
+        correctAnswer: "Poseidon"
+    },
+    {
+        question: "What is the capital of Canada?",
+        choices: ["Toronto", "Vancouver", "Ottawa", "Montreal"],
+        correctAnswer: "Ottawa"
+    },
+    {
+        question: "Who discovered penicillin?",
+        choices: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Joseph Lister"],
+        correctAnswer: "Alexander Fleming"
+    },
+    {
+        question: "What is the largest organ in the human body?",
+        choices: ["Heart", "Liver", "Skin", "Lung"],
+        correctAnswer: "Skin"
+    },
+    {
+        question: "Who is the author of '1984'?",
+        choices: ["George Orwell", "Aldous Huxley", "Ray Bradbury", "J.K. Rowling"],
+        correctAnswer: "George Orwell"
+    },
+    {
+        question: "What is the capital of South Africa?",
+        choices: ["Cape Town", "Johannesburg", "Pretoria", "Durban"],
+        correctAnswer: "Pretoria"
+    },
+    {
+        question: "Which planet is known as the 'Blue Planet'?",
+        choices: ["Earth", "Uranus", "Neptune", "Saturn"],
+        correctAnswer: "Earth"
+    },
+    {
+        question: "Who painted 'Starry Night'?",
+        choices: ["Claude Monet", "Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci"],
+        correctAnswer: "Vincent van Gogh"
+    },
+    {
+        question: "What is the largest island in the world?",
+        choices: ["Greenland", "Australia", "Borneo", "Madagascar"],
+        correctAnswer: "Greenland"
+    },
+    {
+        question: "Who is known as the 'Father of Modern Physics'?",
+        choices: ["Isaac Newton", "Albert Einstein", "Niels Bohr", "Galileo Galilei"],
+        correctAnswer: "Albert Einstein"
+    },
+    {
+        question: "Which river is the longest in the world?",
+        choices: ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"],
+        correctAnswer: "Nile River"
+    },
+    {
+        question: "Who wrote 'The Great Gatsby'?",
+        choices: ["F. Scott Fitzgerald", "Ernest Hemingway", "Jane Austen", "Charles Dickens"],
+        correctAnswer: "F. Scott Fitzgerald"
+    },
+    {
+        question: "In which country did the Renaissance period begin?",
+        choices: ["Italy", "France", "England", "Spain"],
+        correctAnswer: "Italy"
+    },
+    {
+        question: "What is the capital of Argentina?",
+        choices: ["Buenos Aires", "Santiago", "Lima", "Brasilia"],
+        correctAnswer: "Buenos Aires"
+    },
+    {
+        question: "Who is the Greek god of the sea?",
+        choices: ["Zeus", "Poseidon", "Hades", "Apollo"],
+        correctAnswer: "Poseidon"
+    },
+    {
+        question: "What is the currency of Japan?",
+        choices: ["Won", "Yuan", "Yen", "Ringgit"],
+        correctAnswer: "Yen"
+    },
+    {
+        question: "Which element is essential for human bone health?",
+        choices: ["Iron", "Calcium", "Potassium", "Magnesium"],
+        correctAnswer: "Calcium"
+    },
+    {
+        question: "Who wrote 'Pride and Prejudice'?",
+        choices: ["Charlotte Brontë", "Jane Austen", "Emily Brontë", "Charles Dickens"],
+        correctAnswer: "Jane Austen"
+    },
+    {
+        question: "What is the largest ocean on Earth?",
+        choices: ["Atlantic Ocean", "Indian Ocean", "Southern Ocean", "Pacific Ocean"],
+        correctAnswer: "Pacific Ocean"
+    },
+    {
+        question: "Who is known as the 'Queen of Pop'?",
+        choices: ["Beyoncé", "Madonna", "Lady Gaga", "Rihanna"],
+        correctAnswer: "Madonna"
+    },
+    {
+        question: "In which year did the first manned moon landing occur?",
+        choices: ["1965", "1969", "1973", "1977"],
+        correctAnswer: "1969"
+    },
+    {
+        question: "What is the capital of China?",
+        choices: ["Beijing", "Shanghai", "Hong Kong", "Tokyo"],
+        correctAnswer: "Beijing"
+    },
+    {
+        question: "Who discovered the theory of relativity?",
+        choices: ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Niels Bohr"],
+        correctAnswer: "Albert Einstein"
+    },
+    {
+        question: "Which country is known as the 'Land of Fire and Ice'?",
+        choices: ["Iceland", "Greenland", "Canada", "Russia"],
+        correctAnswer: "Iceland"
+    },
+    {
+        question: "What is the chemical symbol for gold?",
+        choices: ["Au", "Ag", "Fe", "Cu"],
+        correctAnswer: "Au"
+    },
+    {
+        question: "Who painted 'The Persistence of Memory'?",
+        choices: ["Claude Monet", "Pablo Picasso", "Vincent van Gogh", "Salvador Dalí"],
+        correctAnswer: "Salvador Dalí"
+    },
+    {
+        question: "What is the currency of India?",
+        choices: ["Rupiah", "Rupee", "Ringgit", "Rand"],
+        correctAnswer: "Rupee"
+    },
+    {
+        question: "Which mammal can fly?",
+        choices: ["Bat", "Mouse", "Squirrel", "Rat"],
+        correctAnswer: "Bat"
+    },
+    {
+        question: "Who is the author of 'The Hobbit'?",
+        choices: ["J.R.R. Tolkien", "George R.R. Martin", "C.S. Lewis", "J.K. Rowling"],
+        correctAnswer: "J.R.R. Tolkien"
+    },
+    {
+        question: "In which year did the Berlin Wall fall?",
+        choices: ["1985", "1989", "1991", "1995"],
+        correctAnswer: "1989"
+    },
+    // Continue adding more questions here
+    // ... (your array of questions)
 ];
 
 let currentQuestionIndex = 0;
 let score = 0;
-let totalQuestions = questions.length;
-let timer;
-
-document.getElementById("quiz-container").style.display = "none";
-
-document.getElementById("start").addEventListener("click", startQuiz);
+const totalQuestions = 15;
 
 function startQuiz() {
-  document.getElementById("start").style.display = "none";
-  document.getElementById("quiz-container").style.display = "block";
-  showQuestion();
-  startTimer();
+    showQuestion();
 }
 
 function showQuestion() {
-  let q = questions[currentQuestionIndex];
-  document.getElementById("question").innerHTML = "<p>" + q.question + "</p>";
-  document.getElementById("options-container").innerHTML = '';
+    const questionElement = document.getElementById('question');
+    const optionsContainer = document.getElementById('options-container');
+    const currentQuestion = questions[currentQuestionIndex];
 
-  q.choices.forEach((option, index) => {
-      const button = document.createElement('button');
-      button.textContent = option;
-      button.addEventListener('click', () => checkAnswer(option));
-      document.getElementById('options-container').appendChild(button);
-  });
+    questionElement.textContent = currentQuestion.question;
+    updateQuestionNumber();
+
+    optionsContainer.innerHTML = '';
+
+    currentQuestion.choices.forEach((option, index) => {
+        const input = document.createElement('input');
+        input.type = 'radio';
+        input.name = 'options';
+        input.value = option;
+        input.id = `option${index + 1}`;
+
+        const label = document.createElement('label');
+        label.textContent = option;
+        label.setAttribute('for', `option${index + 1}`);
+
+        const button = document.createElement('div');
+        button.classList.add('option-container');
+        button.appendChild(input);
+        button.appendChild(label);
+
+        input.addEventListener('change', () => selectOption(option));
+
+        optionsContainer.appendChild(button);
+    });
+
+    document.getElementById('submit-btn').disabled = false;
+    document.getElementById('next-btn').disabled = true;
+    document.getElementById('result').textContent = '';
 }
 
-function checkAnswer(selectedOption) {
-  clearInterval(timer);
+function selectOption(selectedOption) {
+    const correctOption = questions[currentQuestionIndex].correctAnswer;
 
-  if (selectedOption === questions[currentQuestionIndex].correctAnswer) {
-      score++;
-  }
+    document.getElementById('submit-btn').disabled = false;
+    document.getElementById('next-btn').disabled = true;
 
-  document.getElementById('submit-btn').disabled = true;
-  document.getElementById('next-btn').disabled = false;
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = '';
 
-  const resultElement = document.getElementById('result');
-  resultElement.textContent = selectedOption === questions[currentQuestionIndex].correctAnswer ? 'Correct!' : `Wrong! The correct answer is ${questions[currentQuestionIndex].correctAnswer}.`;
+    document.querySelectorAll('input[name="options"]').forEach(option => {
+        option.disabled = true;
+        option.parentElement.classList.remove('selected-option');
+    });
+
+    const selectedOptionElement = document.querySelector(`input[value="${selectedOption}"]`);
+    selectedOptionElement.parentElement.classList.add('selected-option');
+}
+
+function checkAnswer() {
+    const selectedOption = document.querySelector('#options-container input[name="options"]:checked');
+
+    if (selectedOption) {
+        const correctOption = questions[currentQuestionIndex].correctAnswer;
+
+        if (selectedOption.value === correctOption) {
+            score++;
+        }
+
+        document.getElementById('submit-btn').disabled = true;
+        document.getElementById('next-btn').disabled = false;
+
+        const resultElement = document.getElementById('result');
+        resultElement.textContent = selectedOption.value === correctOption ? 'Correct!' : `Wrong! The correct answer is ${correctOption}.`;
+
+        document.querySelectorAll('input[name="options"]').forEach(option => {
+            option.disabled = true;
+        });
+    }
 }
 
 function nextQuestion() {
-  currentQuestionIndex++;
-
-  if (currentQuestionIndex < totalQuestions) {
-      document.getElementById('submit-btn').disabled = false;
-      document.getElementById('next-btn').disabled = true;
-      showQuestion();
-      startTimer();
-  } else {
-      endQuiz();
-  }
-}
-
-function startTimer() {
-  let count = 30;
-  const counter = document.getElementById("counter");
-  timer = setInterval(function () {
-      count--;
-
-      if (count >= 0) {
-          counter.innerHTML = count;
-      }
-
-      if (count === 0) {
-          clearInterval(timer);
-          endQuiz();
-      }
-  }, 1000);
+    currentQuestionIndex++;
+    if (currentQuestionIndex < totalQuestions) {
+        showQuestion();
+    } else {
+        endQuiz();
+    }
 }
 
 function endQuiz() {
-  document.getElementById("quiz-container").style.display = "none";
-  document.getElementById("scoreContainer").style.display = "block";
-
-  let img = document.createElement("img");
-  img.src = "https://i.imgur.com/7GrfqOz.png";
-  img.alt = "score-img";
-  document.getElementById("scoreContainer").appendChild(img);
-
-  let para = document.createElement("p");
-  para.innerHTML = "Your Score is: " + score + " / " + totalQuestions;
-  document.getElementById("scoreContainer").appendChild(para);
+    const quizContainer = document.getElementById('quiz-container');
+    quizContainer.innerHTML = `<h1>Quiz Completed!</h1>
+                               <p>Your score is ${score} out of ${totalQuestions}.</p>`;
 }
+
+function updateQuestionNumber() {
+    const questionNumberElement = document.getElementById('question-number');
+    questionNumberElement.textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
+}
+
+document.addEventListener('DOMContentLoaded', startQuiz);
