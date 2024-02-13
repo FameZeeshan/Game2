@@ -104,12 +104,14 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
 .home_body header{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 
 }
 .home_body main{
