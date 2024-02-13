@@ -227,15 +227,27 @@ const questions = [
         correctAnswer: "1989"
     },
     // Continue adding more questions here
-    // ... (your array of questions)
+    
 ];
+
 
 let currentQuestionIndex = 0;
 let score = 0;
 const totalQuestions = 5;
 
+document.addEventListener('DOMContentLoaded', startQuiz);
+
 function startQuiz() {
+    shuffleQuestions();
     showQuestion();
+}
+
+function shuffleQuestions() {
+    // Fisher-Yates (Knuth) Shuffle algorithm
+    for (let i = questions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
 }
 
 function showQuestion() {
@@ -283,14 +295,13 @@ function selectOption(selectedOption) {
     const resultElement = document.getElementById('result');
     resultElement.textContent = '';
 
-    document.querySelectorAll('input[name="options"]').forEach(option => {
-        option.parentElement.classList.remove('selected-option');
+    document.querySelectorAll('.option-container').forEach(option => {
+        option.classList.remove('selected-option');
     });
 
     const selectedOptionElement = document.querySelector(`input[value="${selectedOption}"]`);
     selectedOptionElement.parentElement.classList.add('selected-option');
 }
-
 
 function checkAnswer() {
     const selectedOption = document.querySelector('#options-container input[name="options"]:checked');
@@ -333,5 +344,3 @@ function updateQuestionNumber() {
     const questionNumberElement = document.getElementById('question-number');
     questionNumberElement.textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
 }
-
-document.addEventListener('DOMContentLoaded', startQuiz);
