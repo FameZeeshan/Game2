@@ -94,7 +94,9 @@ button:hover {
     color: #f70b0b;
 }
 
-
+.quiz_body{
+    background-color: antiquewhite;
+}
 /* home page styling */
 
 .home_body{
@@ -120,3 +122,10 @@ button:hover {
     align-items: center;
     flex-direction: column;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      
+      margin: 10px;
+    }
+  }
