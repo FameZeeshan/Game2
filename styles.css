@@ -124,8 +124,13 @@ button:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-      
-      margin: 10px;
+    
+    
+    .quiz_body{
+        margin: 10px;
+    }
+    
+    .home_header{
+        margin: 10px;
     }
   }
