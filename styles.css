@@ -25,12 +25,13 @@ main {
 
 #quiz-container {
     max-width: 600px;
-    margin: auto;
+    margin: 2px;
     text-align: center;
-    background-color: #fff;
+    background-color: #5a189a;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .options {
@@ -48,6 +49,7 @@ main {
     /* padding: 5px; */
     cursor: pointer;
     transition: background-color 0.3s;
+    background-color: #f20089;
 }
 
 .option-container:hover {
@@ -80,7 +82,7 @@ input[type="radio"]:checked+label {
 }
 
 button {
-    background-color: #80ed99;
+    background-color: #38b000;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -99,7 +101,8 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
     font-size: xx-large;
-    color: #db34c8;
+    color: #3c096c;
+    
 }
 
 #question-number {
@@ -113,7 +116,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: #023047;
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -164,11 +167,7 @@ main p{
     
 }
 
-.options {
-    font-family: "Protest Riot", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
+
 
 .home_img {
     width: 600px;
