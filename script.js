@@ -662,7 +662,7 @@ const questions = [
 
 let currentQuestionIndex = 0;
 let score = 0;
-const totalQuestions = 3;
+const totalQuestions = 5;
 
 document.addEventListener('DOMContentLoaded', startQuiz);
 
