@@ -1,7 +1,12 @@
 body {
     /* font-family: 'Arial', sans-serif; */
-    font-family: 'Brush Script MT', sans-serif;
-    
+    /* font-family: 'Brush Script MT', sans-serif; */
+
+
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -30,7 +35,7 @@ body {
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
-    
+
 }
 
 .option-container {
@@ -47,24 +52,25 @@ body {
 }
 
 .selected-option {
-    background-color: #4fe80d; /* Change this to your desired color */
+    background-color: #4fe80d;
+    /* Change this to your desired color */
 }
 
 input[type="radio"] {
     display: none;
 }
 
-input[type="radio"] + label {
-    
+input[type="radio"]+label {
+
     display: block;
     padding: 8px 12px;
-    
+
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-input[type="radio"]:checked + label {
+input[type="radio"]:checked+label {
     background-color: #3498db;
     color: #fff;
 }
@@ -96,37 +102,75 @@ button:hover {
     color: #f70b0b;
 }
 
-.quiz_body{
+.quiz_body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: antiquewhite;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+
 }
+
 /* home page styling */
 
-.home_body{
+.home_body {
     width: auto;
     background-color: #fefae0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.home_body h1 {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(22, 202, 202, 0.851);
+}
+
+.home_body p {
+    color: #f70b0b;
+}
+
+.container h1 {
+    color: #bc6c25;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     
 }
-.home_img{
+
+.options {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.home_img {
     width: 600px;
     height: 200px;
 }
-.home_body header{
+
+.home_body header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 
 }
-.home_body main{
+
+.home_body main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,23 +178,27 @@ button:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    .quiz_body{
+    .quiz_body {
         margin: 10px;
     }
-    .home_header{
+
+    .home_header {
         margin-left: 10px;
         margin-right: 10px;
     }
-    header h1{
-        
+
+    header h1 {
+
         text-align: center;
     }
-    main p{
+
+    main p {
         margin: 10px;
         text-align: center;
     }
-    .home_img{
+
+    .home_img {
         width: inherit;
         margin: 1px;
     }
-  }
+}
