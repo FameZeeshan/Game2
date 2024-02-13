@@ -13,6 +13,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 #quiz-container {
     max-width: 600px;
     margin: auto;
@@ -100,13 +102,17 @@ button:hover {
 /* home page styling */
 
 .home_body{
-    
+    width: auto;
     background-color: #fefae0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     
+}
+.home_img{
+    width: 600px;
+    height: 200px;
 }
 .home_body header{
     display: flex;
@@ -124,13 +130,23 @@ button:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    
-    
     .quiz_body{
         margin: 10px;
     }
-    
     .home_header{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    header h1{
+        
+        text-align: center;
+    }
+    main p{
         margin: 10px;
+        text-align: center;
+    }
+    .home_img{
+        width: inherit;
+        margin: 1px;
     }
   }
