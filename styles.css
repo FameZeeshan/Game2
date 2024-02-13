@@ -39,7 +39,7 @@ body {
 }
 
 .option-container {
-    border: 2px solid #91f32a;
+    border: 2px solid #3d405b;
     border-radius: 10px;
     /* padding: 5px; */
     cursor: pointer;
@@ -47,12 +47,12 @@ body {
 }
 
 .option-container:hover {
-    background-color: #34cddb;
+    background-color: #f48c06;
     color: #fff;
 }
 
 .selected-option {
-    background-color: #4fe80d;
+    background-color: #3d405b;
     /* Change this to your desired color */
 }
 
@@ -71,12 +71,12 @@ input[type="radio"]+label {
 }
 
 input[type="radio"]:checked+label {
-    background-color: #3498db;
+    background-color: #9d0208;
     color: #fff;
 }
 
 button {
-    background-color: #3498db;
+    background-color: #80ed99;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -88,18 +88,20 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #57cc99;
 }
 
 #result {
     margin-top: 20px;
     font-weight: bold;
+    font-size: xx-large;
     color: #db34c8;
 }
 
 #question-number {
     margin-top: 10px;
-    color: #f70b0b;
+    color: #a53860;
+    font-size: xx-large;
 }
 
 .quiz_body {
@@ -129,6 +131,10 @@ button:hover {
 
 a {
     text-decoration: none;
+    color: #ff99c8;
+    padding: 10px;
+    background-color: #52796f;
+    border-radius: 5px;
 }
 
 .home_body h1 {
