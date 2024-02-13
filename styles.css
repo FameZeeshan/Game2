@@ -1,6 +1,7 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-image: url(./W4yDiih-teen-titans-go-2015-wallpaper.jpg);
+    /* font-family: 'Arial', sans-serif; */
+    font-family: 'Brush Script MT', cursive;
+    /* background-image: url(./W4yDiih-teen-titans-go-2015-wallpaper.jpg); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -91,4 +92,29 @@ button:hover {
 #question-number {
     margin-top: 10px;
     color: #f70b0b;
+}
+
+
+/* home page styling */
+
+.home_body{
+    
+    background-color: #fefae0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home_body header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.home_body main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
