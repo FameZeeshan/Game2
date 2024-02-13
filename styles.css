@@ -97,6 +97,10 @@ button:hover {
 }
 
 .quiz_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: antiquewhite;
 }
 /* home page styling */
